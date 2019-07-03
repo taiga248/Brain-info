@@ -10,14 +10,15 @@ def softmax(a):
 a = np.array([0.3,2.9,4.0])
 print(softmax(a))
 
-def soft_max(b):
-    c = np_max(b)
+def soft_max(a):
+    c = np.max(a)
+    exp_a = np.exp(a - c)
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a
 
-    exp_b = np.exp(b - c)
-
-    sum_exp_b = np.sum(exp_b)
-    y = exp_b / sum_exp_b
     return y
 
-b = np.array([0.3,2.9,4.0])
-print(softmax(a))
+a = np.array([0.3,2.9,4.0])
+print(soft_max(a))
+w = soft_max(a)
+print(np.sum(w))
