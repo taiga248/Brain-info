@@ -1,1 +1,1 @@
-This is for study.
+脳科学実習のメモ
